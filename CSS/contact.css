@@ -1,0 +1,169 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0%;
+}
+.navbar-brand img{
+    height: 50px;
+    padding-left: 50px;
+}
+.navbar-toggler-icon {
+    background-color: transparent !important;
+  }
+  
+.navbar-toggler-icon i {
+    color:#01a6dd !important; 
+  }
+  .navlink{
+    color: white;
+}
+.navlink:hover{
+    color: #01a6dd;
+} 
+.informationcont a{
+    padding: 7px 35px 7px 35px;
+    border-radius: 10px;
+}
+main{
+    padding: 150px 0px 180px 60px;
+    background-image: url(../IMAGES/background-image\ resized.png);
+    background-size: cover;
+    background-position: center;
+}
+main h3{
+    color: white;
+    font-weight: bolder;
+    font-size: 40px;
+}
+.section-one{
+   display: grid;
+   grid-template-columns: 33.33% 33.33% 33.33%;
+   text-align: center;
+   padding: 60px 5% 0px 5%;
+}
+.section-one i{
+    font-size: 40px;
+    background-color: #c1dfea;
+    color: #33b7e3;
+    padding: 15px;
+    border-radius: 100px;
+}
+.cont{
+    border: 1px solid #cbcbcb;
+    box-shadow: 0 6px 4px #cbcbcb;
+    border-radius: 10px;
+    margin-right: 40px;
+    padding-top: 20px;
+}
+.cont h3{
+    padding-top: 20px;
+}
+.section-two{
+    padding: 80px;
+}
+.left{
+  padding: 20px;
+}
+.right{
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.right form label{
+    padding-bottom: 10px;
+}
+input{
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    border: 1px solid black;
+}
+input:focus{
+    outline: none;
+ }
+#information{
+    padding: 5px 0px 200px 5px;
+    border-radius: 8px;
+    border: none;
+    border: 1px solid black;
+}
+#information:focus{
+    outline: none;
+}
+#submit{
+    width: 100%;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+footer{
+    background-color: #03141e;
+}
+.footer-nav span{
+    padding-right: 30px;
+}
+.footer-nav a{
+    text-decoration: none;
+    color: white;
+}
+footer hr{
+    color: white;
+}
+
+@media screen and (max-width:992px){
+    main{
+        padding: 125px 0px 140px 40px;
+    }
+    .section-one{
+        padding: 5px 5% 0px 5%;
+     }
+     .cont{
+        margin-right: 20px;
+        padding-top: 10px;
+    }
+    .section-one{
+        padding: 50px 1% 0px 2%;
+    }
+    .section-one i{
+        font-size: 20px;
+    }
+    .section-two{
+        padding: 30px;
+        margin-top: 40px;
+    }
+    .left{
+      margin-bottom: 20px;
+      padding: 10px;
+    }
+}
+
+@media screen and (max-width:600px){
+    .navbar-brand img{
+        padding-left: 30px;
+    }
+    main{
+        padding: 70px 0px 70px 30px;
+    }
+    main h3{
+        font-size: 30px;
+    }
+    .section-one{
+        grid-template-columns: 100%;
+     }
+     .section-two{
+        padding-top: 10px;
+     }
+     .cont{
+        margin-bottom: 20px;
+     }
+    .left{
+        padding: 5px;
+        margin-bottom: 20px;
+    }
+    .left span img{
+        width: 40px;
+    }
+}

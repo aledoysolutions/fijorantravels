@@ -1,0 +1,65 @@
+FIRSTNAME: Francis
+LASTNAME: Nwankwo
+WHERE: lagos
+TO: togo
+EMAIL: francisnwankwo1972@gmail.com
+PHONE_NUMBER: 08069815240
+PRICE: $1000
+DATE: 2222-02-17
+================================================
+FIRSTNAME: Chidera
+LASTNAME: Nwankwo
+WHERE: la
+TO: fiji
+EMAIL: francisnwankwo1972@gmail.com
+PHONE_NUMBER: 08069815240
+PRICE: $200
+DATE: 2222-02-17
+================================================
+FIRSTNAME: Chidera
+LASTNAME: Nwankwo
+WHERE: la
+TO: fiji
+EMAIL: francisnwankwo1972@gmail.com
+PHONE_NUMBER: 08069815240
+PRICE: $200
+DATE: 2222-02-17
+================================================
+FIRSTNAME: Chidera
+LASTNAME: Nwankwo
+WHERE: la
+TO: fiji
+EMAIL: francisnwankwo1972@gmail.com
+PHONE_NUMBER: 08069815240
+PRICE: $200
+DATE: 2222-02-17
+================================================
+FIRSTNAME: Chini
+LASTNAME: Ajeagbu
+WHERE: texas
+TO: london
+EMAIL: francisnwankwo1972@gmail.com
+PHONE_NUMBER: 07037414144
+PRICE: $1000
+DATE: 2222-02-17
+================================================
+FIRSTNAME: Chini
+LASTNAME: Ajeagbu
+WHERE: texas
+TO: london
+EMAIL: francisnwankwo1972@gmail.com
+PHONE_NUMBER: 07037414144
+PRICE: $1000
+DATE: 2222-02-17
+================================================
+FIRSTNAME: David
+LASTNAME: Chris
+WHERE: texas
+TO: fiji
+EMAIL: oseforita@gmail.com
+PHONE_NUMBER: 08069815240
+PRICE: $1000
+DATE: 2002-02-17
+================================================
+
+mmmm
