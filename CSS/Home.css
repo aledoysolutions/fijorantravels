@@ -44,6 +44,21 @@ main{
 .info div{
     display: flex;
 }
+.info-one{
+    width: 100%;
+    border: none;
+    background-color: white;
+}
+.info-one:focus,
+.info-two:focus{
+    outline: none;
+    border: none;
+}
+.info-two{
+    border: none;
+    background-color: white;
+    width: 90%;
+}
 .icon{
     padding: 4px 8px 0px 0px
 }
@@ -54,7 +69,7 @@ main{
     border-radius: 100px;
 }
 .link{
-    padding-top: 8px;
+    padding-top: 15px;
 }
 .left{
     padding-right: 20px;
@@ -86,7 +101,7 @@ main{
 }
 
 article{
-    padding: 0% 5% 0% 5%;
+    padding: 0% 4% 0% 4%;
 }
 .art-left{
     padding-right: 40px;
@@ -112,6 +127,9 @@ article{
     padding: 20px 0px 100px 0px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
+.article-two p{
+    padding: 5px 10px 0px 10px;
+}
 .art-info{
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
@@ -123,13 +141,20 @@ article{
     padding: 10px 0px 0px 15px;
     margin: 0px 15% 0px 15%;
     position: relative;
-    bottom: 30px;
+    bottom: 50px;
 }
 .art-info div{
     display: flex;
 }
-
-
+.number-of-people{
+    width: 95%;
+    border: none;
+    background-color: white;
+}
+.number-of-people:focus{
+    outline: none;
+    border: none;
+}
 /* section two */
 
 .section-two{
@@ -189,7 +214,15 @@ article{
     border-radius: 15px;
 }
 .profile-name{
-    padding-top: 30px;
+    padding-top: 20px;
+}
+.profile-img{
+    width: 80px;
+    height: 80px;
+}
+.profile-imgg{
+    width: 80px;
+    height: 80px;
 }
 .art-three-right-img{
     transform: translateX(100%);
@@ -200,14 +233,23 @@ article{
     transform: translateX(0);
     opacity: 1;
 }
-
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black; 
+  width: 20px;
+  height: 20px;
+}
 /* section-three */
 .section-three{
     background-color: #ccedf8;
     margin-top: 50px;
 }
 .s-t-l{
-    padding: 300px 0px 0px 5%;
+    padding: 50px 0px 0px 5%;
+}
+.s-t-l img{
+    padding-top: 40px;
+    width: 80%;
 }
 form{
     padding: 40px 0% 20px 5%;
@@ -272,7 +314,7 @@ footer hr{
         font-size: 13px;
     }
     .art-one{
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 100%;
     }
     .art-info{
         grid-template-columns: 50% 50%;
@@ -290,6 +332,9 @@ footer hr{
     .sec-two-view-more{
         margin-top: 20px;
      }
+     .article-two{
+        margin-top: 40px;
+     }
      .article-three{
         margin-top: 10%;
      }
@@ -303,10 +348,18 @@ footer hr{
         padding: 50px 2% 0px 3%;
     }
     .profile-img{
-        width: 60px;
+        width: 70px;
     }
     .profile-name{
         padding-top: 10px;
+    }
+    .profile-imgg{
+        width: 70px;
+        height: 70px;
+    }
+    .s-t-l img{
+        text-align: center;
+        width: 100%;
     }
 }
 
@@ -315,12 +368,13 @@ footer hr{
         padding-top: 15%;
     }
     .art-info{
-        grid-template-columns: 33.33% 33.33% 33.33%;
+        grid-template-columns: 50% 50%;
         bottom: 50px;
         padding: 20px 20px 0px 20px;
     }
     .art-info div{
         padding-bottom: 20px;
+        width: 100%;
      }
      .section-two{
         margin: 2%;
@@ -329,10 +383,17 @@ footer hr{
         padding-top: 40px;
      }
      .s-t-l{
-        padding-top: 50px;
+        padding: 50px 5% 0px 5%;
     }
 }
-
+@media screen and (max-width:680px){
+     .info{
+        width: 620px;
+     }
+     .s-t-l{
+        padding-right: 5%;
+     }
+}
 @media screen and (max-width:600px){
     .navbar-brand img{
         padding-left: 30px;
@@ -345,7 +406,10 @@ footer hr{
         padding: 0px 8px 0px 10px
     }
     .link{
-        padding-top: 4px;
+        padding-top: 18px;
+    }
+    .link a{
+        font-size: 10px;
     }
     .i{
         padding-top: 5px;
@@ -368,7 +432,8 @@ footer hr{
     }
     .art-info{
         grid-template-columns: 50% 50%;
-        bottom: 50px;
+        bottom: 60px;
+        font-size: 10px;
     }
     .art-info div{
        padding-bottom: 20px;
@@ -383,6 +448,18 @@ footer hr{
         width: 95%;
      }
      input[type="submit"]{
+        width: 95%;
+    }
+    .profile-img{
+        width: 70px;
+        height: 70px;
+    }
+    .profile-imgg{
+        width: 70px;
+        height: 70px;
+    }
+    .s-t-l img{
+        text-align: center;
         width: 95%;
     }
 }

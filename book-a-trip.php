@@ -25,7 +25,9 @@ ini_set('display_errors',0);
       <section class="section-one d-flex flex-wrap">
         <div class="sec-one-left col-12 col-lg-7 col-md-6">
           <h2 class="fw-bold text-center">Book A Trip Now</h2>
-          <p  class="pt-4 text-center">Borem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur tempus urna at turpis condimentum lobortis. Ut commodo efficitur neque.</p>
+          <p  class="pt-4 text-center">Ready to explore the world? Book a trip to your dream country with Fijoran Travels and turn your travel dreams into reality. Whether it's a relaxing beach vacation, an exciting city adventure, or a cultural getaway or Educational purposes, we’re here to help you every step of the way. Let’s make your dream destination your next adventure!
+
+.</p>
   
 
            <div class="form">
