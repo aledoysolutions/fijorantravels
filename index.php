@@ -33,7 +33,7 @@ require_once('app/includes/fns.php');
             <br>
 
             <div class="info">
-                <div>
+                <div class="info-content" >
                     <p class="icon"><img src="IMAGES/Group 8 (3).png" alt="location-logo"></p>
                     <p class="i">
                         <span><b>Location</b></span><br>
@@ -42,7 +42,7 @@ require_once('app/includes/fns.php');
                     </p>
                 </div>
 
-                <div>
+                <div class="info-content">
                     <div>
                         <p class="icon"><img src="IMAGES/Group 9 (1).png" alt="calender-logo"></p>
                         <p class="i">
@@ -51,6 +51,7 @@ require_once('app/includes/fns.php');
                         </p>
                     </div>
                 </div>
+                
                 <p class="link"><a href="#" class="btn btn-primary">GET STARTED</a></p>
             </div>
         </div>

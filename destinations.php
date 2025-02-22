@@ -11,8 +11,7 @@ require_once('app/includes/fns.php');
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Destinations</title>
    <link rel="stylesheet" href="BOOTSTRAP/css/bootstrap.min.css">
-   <link rel="stylesheet" href="CSS/blog.css">
-   <link rel="stylesheet" href="CSS/Home.css">
+   <link rel="stylesheet" href="CSS/style.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
 </head>
 

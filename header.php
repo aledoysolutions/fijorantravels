@@ -1,7 +1,7 @@
   <nav class="navbar navbar-expand-lg bg-body-tertiary bg-dark">
         <div class="container-fluid">
           <!-- Logo -->
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="index">
             <img src="IMAGES/logo-removebg-preview.png" alt="Logo">
           </a>
       
