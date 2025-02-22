@@ -1,14 +1,32 @@
 <?php
+include('app/includes/connect.php');
+require_once('app/includes/fns.php');
+require_once('PHPMailer/PHPMailerAutoload.php');
 
-$name = $_POST['name'];
-$email = $_POST['email'];
-$contact_number = $_POST['contact_number'];
-$travel_date = $_POST['travel_date'];
-$information = $_POST['information'];
+if (!isset($_SERVER['HTTP_REFERER'])) {
+    $error = "Invalid request method";
+    include('contact.php');
+    exit;
+}
+
+$name = mysqli_real_escape_string($conn, $_POST['name']);
+$email = mysqli_real_escape_string($conn, $_POST['email']);
+$contact_number = mysqli_real_escape_string($conn, $_POST['contact_number']);
+$travel_date = mysqli_real_escape_string($conn, $_POST['travel_date']);
+$information = mysqli_real_escape_string($conn, $_POST['information']);
+
+if (isset($_GET['token'])) {
+    $destination = mysqli_real_escape_string($conn, $_POST['destination']);
+    $price = mysqli_real_escape_string($conn, $_POST['price']);
+
+    $otherInfo = "
+    Destination :  $destination <br>
+    Price :  $price <br> ";
+}
 
 $name_convert = ucwords($name);
 
-if(!$name || !$email || !$contact_number || !$travel_date || !$information){
+if (!$name || !$email || !$contact_number || !$travel_date || !$information) {
     $msg = 'error';
     $comment = 'All information required';
     include('contact.php');
@@ -29,37 +47,35 @@ if (strlen($contact_number) != 11) {
     exit;
 }
 
-if (strlen($information) > 30 ) {
+if (strlen($information) > 30) {
     $msg = 'error';
     $comment = 'Additional information shouln\'t be more than 30 Words.';
     include('contact.php');
     exit;
 }
- 
+
 
 //write the code to send the details to email
 
-             $content = 'Name: '.$name_convert."\n".
-                'Email : ' .$email."\n".
-                'Contact_number : '.$contact_number."\n".
-                'Travel_date : '.$travel_date."\n".
-                'Information : '.$information."\n".
-                '================================================' . "\n";
+$content = 'Name: ' . $name_convert . "<br>" .
+    'Email : ' . $email . "<br>" .
+    'Contact_number : ' . $contact_number . "<br>" .
+    'Travel Date : ' . $travel_date . "<br>" .
+    'Information : ' . $information . "<br>" .
+    "$otherInfo".
+    '================================================' . "\n";
 
-     $to = 'Francisnwankwo37@gmail.com';
-     $sub = 'Client Trip Booking Info';
-     $from = "From: noreply@aledoy.com";  
+$to = 'akerelejohn6@gmail.com';
+$subject = 'Client Trip Booking Info';
+$from = "From: noreply@aledoy.com";
 
-    mail($to,$sub,$content,$from); 
+send_email($to, organisation(), $name, $subject, $content);
 
-    $myFile = fopen("contact_us_datas.txt","a");
-    fwrite($myFile,$content);
-    fclose($myFile);
+$myFile = fopen("contact_us_datas.txt", "a");
+fwrite($myFile, $content);
+fclose($myFile);
 
-
-//show succesful message
-
-    $msg = 'success';
-    include('contact.php');
-
-?>
+$msg = 'success';
+$destination = '';
+$price = '';
+include('contact.php');

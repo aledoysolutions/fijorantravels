@@ -1,3 +1,8 @@
+<?php
+include('app/includes/connect.php');
+require_once('app/includes/fns.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +17,7 @@
 
 <body>
 
-    <?php include('header.php')?>
+    <?php include('header.php') ?>
 
     <main class="d-flex flex-wrap">
         <div class="left col-12 col-lg-5 col-md-6">
@@ -68,7 +73,7 @@
                 for business, leisure, or education, our expert team ensures a smooth experience from start to finish.
             </P>
             <div class="sec-one-art">
-                <div >
+                <div>
                     <span><b>2000+</b></span><br>
                     <span>Our Explorers</span>
                 </div>
@@ -167,84 +172,32 @@
     </div>
 
     <section class="section-two">
-        <div class="sec-two-parent">
-            <div class="sec-two-cont">
-                <img src="IMAGES/Mask group (2).png" alt="" class="img"><br>
-                <div class="locationNprice">
-                    <div>
-                        <b>Maldives Beach</b> <br>
-                        <img src="IMAGES/Group 7.png" alt=""> <span>Labuan Bajo, United Kingdom</span>
+            <div class="sec-two-parent">
+        <?php
+        $query = "SELECT * FROM product LIMIT 6";
+        $result = $conn->query($query);
+        $num = mysqli_num_rows($result);
+        for ($i = 0; $i < $num; $i++) {
+            $row = mysqli_fetch_array($result);
+        ?>
+                <a class="text-dark text-decoration-none" href="contact?token=<?= $row['token']; ?>#contact">
+                    <div class="sec-two-cont">
+                        <img src="app/<?= $row['image_path']; ?>" alt="" class="img"><br>
+                        <div class="locationNprice">
+                            <div>
+                                <b><?= $row['destination']; ?></b> <br>
+                                <img src="IMAGES/Group 7.png" alt=""> <span><?= strip_tags($row['destinationLocation']); ?></span>
+                            </div>
+                            <div class="price">
+                                <span> &#8358; <?= number_format($row['price']); ?></span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="price">
-                        <span>$250</span>
-                    </div>
-                </div>
+                </a>
+                <?php } ?>
             </div>
-            <div class="sec-two-cont">
-                <img src="IMAGES/beautiful-tropical-maldives-resort-hotel-island-with-beach-sea_1339-103673 2.png"
-                    alt="" class="img"><br>
-                <div class="locationNprice">
-                    <div>
-                        <b>Maldives Beach</b> <br>
-                        <img src="IMAGES/Group 7.png" alt=""> <span>Labuan Bajo, United Kingdom</span>
-                    </div>
-                    <div class="price">
-                        <span>$450</span>
-                    </div>
-                </div>
-            </div>
-            <div class="sec-two-cont">
-                <img src="IMAGES/Mask group.png" alt="" class="img"><br>
-                <div class="locationNprice">
-                    <div>
-                        <b>Maldives Beach</b> <br>
-                        <img src="IMAGES/Group 7.png" alt=""> <span>Labuan Bajo, United Kingdom</span>
-                    </div>
-                    <div class="price">
-                        <span>$300</span>
-                    </div>
-                </div>
-            </div>
-            <div class="sec-two-cont">
-                <img src="IMAGES/Mask group (2).png" alt="" class="img"><br>
-                <div class="locationNprice">
-                    <div>
-                        <b>Maldives Beach</b> <br>
-                        <img src="IMAGES/Group 7.png" alt=""> <span>Labuan Bajo, United Kingdom</span>
-                    </div>
-                    <div class="price">
-                        <span>$250</span>
-                    </div>
-                </div>
-            </div>
-            <div class="sec-two-cont">
-                <img src="IMAGES/beautiful-tropical-maldives-resort-hotel-island-with-beach-sea_1339-103673 2.png"
-                    alt="" class="img"><br>
-                <div class="locationNprice">
-                    <div>
-                        <b>Maldives Beach</b> <br>
-                        <img src="IMAGES/Group 7.png" alt=""> <span>Labuan Bajo, United Kingdom</span>
-                    </div>
-                    <div class="price">
-                        <span>$450</span>
-                    </div>
-                </div>
-            </div>
-            <div class="sec-two-cont">
-                <img src="IMAGES/Mask group.png" alt="" class="img"><br>
-                <div class="locationNprice">
-                    <div>
-                        <b>Maldives Beach</b> <br>
-                        <img src="IMAGES/Group 7.png" alt=""> <span>Labuan Bajo, United Kingdom</span>
-                    </div>
-                    <div class="price">
-                        <span>$300</span>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="text-center sec-two-view-more">
-            <a href="#" class="btn btn-dark">View More</a>
+            <a href="destinations" class="btn btn-dark">View More</a>
         </div>
     </section>
 
@@ -299,7 +252,7 @@
                         <div class="profile">
                             <div class="pro-flex d-flex flex-wrap">
                                 <p class="pe-3">
-                                    <img src="IMAGES/black man on suit.jpeg" alt="Profile 3"
+                                    <img src="IMAGES/wyatt.jpg" alt="Profile 3"
                                         class="profile-imgg border rounded-circle">
                                 </p>
                                 <div class="profile-name">
@@ -351,7 +304,7 @@
 
 
         <div class="art-three-right col-12 col-lg-6 col-md-6">
-            <img src="IMAGES/Mask group (5).png" alt="" width="100%" class="art-three-right-img">
+            <img src="IMAGES/man-camera.png" alt="" width="100%" class="art-three-right-img">
         </div>
     </article>
 
@@ -378,7 +331,7 @@
         </form>
     </section>
 
-    <?php include('footer.php')?>
+    <?php include('footer.php') ?>
 
     <script src="JAVASCRIPT/home.js"></script>
     <script src="BOOTSTRAP/js/bootstrap.min.js"></script>

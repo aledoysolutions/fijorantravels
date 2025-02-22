@@ -14,26 +14,26 @@
            <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0"> 
               <li class="nav-item">
-                <a class="nav-link active navlink ps-4 fw-bold" aria-current="page" href="index.php">HOME</a>
+                <a class="nav-link active navlink ps-4 fw-bold" aria-current="page" href="index">HOME</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link navlink ps-4 fw-bold" href="about-us.php">ABOUT</a>
+                <a class="nav-link navlink ps-4 fw-bold" href="about-us">ABOUT</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link navlink ps-4 fw-bold" href="services.php">SERVICES</a>
+                <a class="nav-link navlink ps-4 fw-bold" href="services">SERVICES</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link navlink ps-4 fw-bold" href="blog.php">BLOG</a>
+                <a class="nav-link navlink ps-4 fw-bold" href="blog">BLOG</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link navlink ps-4 fw-bold" href="contact.php">CONTACT</a>
+                <a class="nav-link navlink ps-4 fw-bold" href="contact">CONTACT</a>
               </li>
             </ul>
       
             <!-- Sign Up and Contact Links -->
             <div class="d-flex align-items-center pt-4 pe-5 informationcont">
               <p class="pe-3 pb-4 mb-0 ms-4">
-                <a href="book-a-trip.php" class="btn btn-primary signup">BOOK A TRIP</a>
+                <a href="book-a-trip" class="btn btn-primary signup">BOOK A TRIP</a>
               </p>
             </div>
           </div>
