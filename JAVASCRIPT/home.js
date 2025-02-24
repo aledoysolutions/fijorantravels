@@ -1,9 +1,6 @@
 const mainImg = document.querySelector('.right img');
 const images = [
-  "IMAGES/second.png",
-  "IMAGES/third.png",
-  "IMAGES/fourth.png",
-  "IMAGES/fifth.png",
+  "IMAGES/banner-image-2.jpg",
   "IMAGES/first.png",
 
 ];

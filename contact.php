@@ -28,7 +28,7 @@ require_once('app/includes/fns.php');
         <div class="cont">
             <i class="fa-solid fa-envelope"></i>
             <h3>Email</h3>
-            <p>Info@fijorantravel.org <br>
+            <p>Info@fijorantravel.com <br>
                 www.fijorantravels.com</p>
         </div>
         <div class="cont">

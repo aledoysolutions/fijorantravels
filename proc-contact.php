@@ -71,9 +71,6 @@ $from = "From: noreply@aledoy.com";
 
 send_email($to, organisation(), $name, $subject, $content);
 
-$myFile = fopen("contact_us_datas.txt", "a");
-fwrite($myFile, $content);
-fclose($myFile);
 
 $msg = 'success';
 $destination = '';

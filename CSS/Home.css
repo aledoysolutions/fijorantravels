@@ -114,6 +114,7 @@ main {
     display: flex;
     justify-content: center;
     text-align: center;
+    /* grid-template-columns: 1fr 1fr 1fr; */
 }
 
 .sec-one-art div {
@@ -356,9 +357,6 @@ footer hr {
         padding: 5px 50px 5px 50px;
     }
 
-    .sec-one-art{
-        display: block;
-    }
 
     article {
         padding: 0% 2% 0% 3%;

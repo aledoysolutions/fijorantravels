@@ -60,9 +60,6 @@ if (!mail($to, $sub, $content, $from)) {
     exit;
 }
 
-$myFile = fopen("book_a_trip_customers_data.txt", "a");
-fwrite($myFile,$content);
-fclose($myFile);
 
 // Display success message
 $msg = 'success';

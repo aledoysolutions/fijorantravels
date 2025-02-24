@@ -58,7 +58,7 @@
                             <label for="inputChoosePassword" class="form-label">Enter Password</label>
                             <div class="ms-auto position-relative">
                               <div class="position-absolute top-50 translate-middle-y search-icon px-3"><i class="bi bi-lock-fill"></i></div>
-                              <input type="password" class="form-control radius-30 ps-5" id="inputChoosePassword" placeholder="Enter Password" name="password">
+                              <input type="text" class="form-control radius-30 ps-5" id="inputChoosePassword" placeholder="Enter Password" name="password">
                             </div>
                           </div>
                           <div class="col-6">
