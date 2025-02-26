@@ -65,7 +65,7 @@ $content = 'Name: ' . $name_convert . "<br>" .
     "$otherInfo".
     '================================================' . "\n";
 
-$to = 'akerelejohn6@gmail.com';
+$to = 'bookings@fijorantravels.com';
 $subject = 'Client Trip Booking Info';
 $from = "From: noreply@aledoy.com";
 

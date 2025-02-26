@@ -9,7 +9,7 @@ require_once('app/includes/fns.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CONTACT</title>
+    <title>CONTACT | Fijoran Travels | Trusted Tour & Travel Agency for Flights, Visas, Hotels & Tours</title>
     <link rel="stylesheet" href="BOOTSTRAP/css/bootstrap.min.css">
     <link rel="stylesheet" href="CSS/contact.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
@@ -28,8 +28,8 @@ require_once('app/includes/fns.php');
         <div class="cont">
             <i class="fa-solid fa-envelope"></i>
             <h3>Email</h3>
-            <p>Info@fijorantravel.com <br>
-                www.fijorantravels.com</p>
+            <p>info@fijorantravels.com <br>
+                bookings@fijorantravels.com</p>
         </div>
         <div class="cont">
             <i class="fa-solid fa-phone"></i>

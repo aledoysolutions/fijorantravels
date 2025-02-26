@@ -6,18 +6,16 @@ $where = $_POST["where"];
 $To = $_POST["to"];
 $email = $_POST["email"];
 $phonenumber = $_POST["phone_number"];
-$price = $_POST["price"];
 $date = $_POST["date"];
+$date2 = $_POST["date2"];
 
 // Format first and last names to have the first letter capitalized
 $firstname_convert = ucwords($firstname);
 $lastname_convert = ucwords($lastname);
 
-// Format price as currency
-$price_currency = "$$price";
 
 // Validation
-if (!$firstname_convert || !$lastname_convert || !$where || !$To || !$email || !$phonenumber || !$price || !$date) {
+if (!$firstname_convert || !$lastname_convert || !$where || !$To || !$email || !$phonenumber) {
     $msg = 'error';
     $comment = 'All information required!';
     include('book-a-trip.php');
@@ -45,11 +43,11 @@ $content = 'FIRSTNAME: ' . $firstname_convert . "\n" .
     'TO: ' . $To . "\n" .
     'EMAIL: ' . $email . "\n" .
     'PHONE_NUMBER: ' . $phonenumber . "\n" .
-    'PRICE: ' . $price_currency . "\n" .
-    'DATE: ' . $date . "\n" .
+    'CHECK-IN: ' . $date . "\n" .
+    'CHECK-OUT: ' . $date2 . "\n" .
     '================================================' . "\n";
 
-$to = 'Francisnwankwo37@gmail.com';  
+$to = 'bookings@fijorantravels.com';  
 $sub = 'Client Trip Booking Info';
 $from = "From: noreply@aledoy.com";
 

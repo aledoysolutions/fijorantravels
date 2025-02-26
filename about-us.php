@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ABOUT US</title>
+    <title>ABOUT US | Fijoran Travels | Trusted Tour & Travel Agency for Flights, Visas, Hotels & Tours</title>
     <link rel="stylesheet" href="BOOTSTRAP/css/bootstrap.min.css">
     <link rel="stylesheet" href="CSS/about us.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
@@ -19,7 +19,7 @@
     </main>
 
     <section class="section-one d-flex flex-wrap">
-        <h1 class="left col-12 col-lg-6 col-md-6">We Are Very Trusted Tour And Travel Agency, Standing Up For All You
+        <h1 class="left col-12 col-lg-6 col-md-6">Your trusted Tour and Travel Agency, always here for you.
         </h1>
         <ul style="list-style-type: none;" class="right col-12 col-lg-6 col-md-6 fw-bold">
             <li>Professional</li>
@@ -33,9 +33,13 @@
             <img src="IMAGES/Group 20.png" alt="group-20"> <span>Affortable Price</span> <img
                 src="IMAGES/Vector (3).png" alt="vector-3"> <span>Prioritize Comfort</span>
             <p class="pt-3"><b>OUR VISION :</b> <br>
-                At Fijoran Travels our aspiration is to become the globally recognized and pioneering travel management company, earning trust by achieving ambitious goals through unwavering commitment, diligence and steadfast integrity. We are committed to providing seamless, stress-free travel experiences for individuals, families, and corporate clients. <br><br>
+                At Fijoran Travels our aspiration is to become the globally recognized and pioneering travel management
+                company, earning trust by achieving ambitious goals through unwavering commitment, diligence and
+                steadfast integrity. We are committed to providing seamless, stress-free travel experiences for
+                individuals, families, and corporate clients. <br><br>
                 <b>OUR MISSION :</b><br>
-                With our efficiency, accountability and responsibility we assist our clients travel with ease and always exceeding their Expectations.
+                With our efficiency, accountability and responsibility we assist our clients travel with ease and always
+                exceeding their Expectations.
                 Providing unbeatable travel experience around the World!. We believe that
                 travel should be an exciting experience, not a stressful process. That’s why we leverage our expertise
                 and strong partnerships with leading airlines, visa agencies, educational institutions, and travel
@@ -74,7 +78,9 @@
                 <div>
                     <img src="IMAGES/Group 22.png" alt="group-22" width="60px">
                     <p class="pt-3"><b>Competitive Price</b></p>
-                    <p>We offer unbeatable value with competitive prices tailored to fit every budget. We strive to provide exceptional travel experiences without compromising on quality, ensuring you get the best deals for your next adventure.</p>
+                    <p>We offer unbeatable value with competitive prices tailored to fit every budget. We strive to
+                        provide exceptional travel experiences without compromising on quality, ensuring you get the
+                        best deals for your next adventure.</p>
                 </div>
             </div>
         </div>
@@ -83,7 +89,9 @@
     <section class="section-three d-flex flex-wrap">
         <div class="sec-three-cont-left col-12 col-lg-6 col-md-6">
             <h2>Our Beautiful Gallery Collections</h2>
-            <p>Explore the world through our stunning gallery collections, showcasing breathtaking destinations and unforgettable experiences. From vibrant cityscapes to serene landscapes, our gallery captures the essence of every journey, inspiring your next adventure with Fijoran Travels.</p>
+            <p>Explore the world through our stunning gallery collections, showcasing breathtaking destinations and
+                unforgettable experiences. From vibrant cityscapes to serene landscapes, our gallery captures the
+                essence of every journey, inspiring your next adventure with Fijoran Travels.</p>
             <img src="IMAGES/Frame 34467.png" alt="Frame 34467">
         </div>
         <div class="sec-three-cont-right col-12 col-lg-6 col-md-6">
