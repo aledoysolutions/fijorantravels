@@ -83,15 +83,15 @@ require_once('app/includes/fns.php');
                 </P>
                 <div class="sec-one-art">
                 <div >
-                    <span><b id="explorers-num">2000+</b></span><br>
+                    <span><b id="explorers-num">1000+</b></span><br>
                     <span>Our Explorers</span>
                 </div>
                 <div>
-                    <span><b id="destinations-num">100+</b></span><br>
+                    <span><b id="destinations-num">50+</b></span><br>
                     <span>Our Destinations</span>
                 </div>
                 <div>
-                    <span><b id="years-num">20+</b></span><br>
+                    <span><b id="years-num">10+</b></span><br>
                     <span>Years Experience</span>
                 </div>
             </div>

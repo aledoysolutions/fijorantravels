@@ -40,9 +40,9 @@ window.addEventListener('DOMContentLoaded', slideInElements);
 
 // Initial numbers for the elements
 const initialNumbers = {
-    explorers: 2000,
-    destinations: 100,
-    years: 20
+    explorers: 1000,
+    destinations: 50,
+    years: 10
   };
   
   // Function to shuffle numbers randomly
