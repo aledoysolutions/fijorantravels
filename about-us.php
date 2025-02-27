@@ -56,7 +56,7 @@
 
     <article class="d-flex flex-wrap">
         <div class="art-one col-12 col-lg-4 col-md-6 text-center">
-            <img src="IMAGES/new about us article picture.jpg" alt="image-2">
+            <img src="IMAGES/new-about-us article picture.jpg" alt="image-9">
         </div>
         <div class="art-two col-12 col-lg-8 col-md-6">
             <div class="attributes text-center text-light">
@@ -98,6 +98,10 @@
             <img src="IMAGES/Frame 34466.png" alt="Frame 34466">
         </div>
     </section>
+
+    <button id="backToTop" class="btn btn-primary">
+    <i class="fa fa-arrow-up"></i> Top
+    </button>
 
     <?php include('footer.php')?>
 

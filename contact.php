@@ -105,8 +105,13 @@ require_once('app/includes/fns.php');
             referrerpolicy="no-referrer-when-downgrade"></iframe>
     </article>
 
+    <button id="backToTop" class="btn btn-primary">
+    <i class="fa fa-arrow-up"></i> Top
+    </button>
+
     <?php include('footer.php') ?>
 
+    <script src="JAVASCRIPT/contact.js"></script>
     <script src="BOOTSTRAP/js/bootstrap.min.js"></script>
 </body>
 

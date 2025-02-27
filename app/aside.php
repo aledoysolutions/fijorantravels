@@ -42,7 +42,7 @@
              <ul>
                  <li> <a href="blog_category.php"><i class="bi bi-circle"></i>Blog category</a>
                  </li>
-                 <li> <a href="blog_post"><i class="bi bi-circle"></i>Blog Post</a>
+                 <li> <a href="blog_post.php"><i class="bi bi-circle"></i>Blog Post</a>
                  </li>
 
              </ul>

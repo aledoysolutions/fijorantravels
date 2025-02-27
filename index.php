@@ -63,7 +63,7 @@ require_once('app/includes/fns.php');
         </div>
 
         <div class="right col-12 col-lg-7 col-md-6">
-            <p><img src="IMAGES/first.png" alt="Group 15"></p>
+            <p><img src="IMAGES/Group-15 (1).png" alt="Group 15"></p>
         </div>
 
     </main>
@@ -82,19 +82,19 @@ require_once('app/includes/fns.php');
                     finish.
                 </P>
                 <div class="sec-one-art">
-                    <div>
-                        <span><b>2000+</b></span><br>
-                        <span>Our Explorers</span>
-                    </div>
-                    <div>
-                        <span><b>100+</b></span><br>
-                        <span>Our Destinations</span>
-                    </div>
-                    <div>
-                        <span><b>20+</b></span><br>
-                        <span>Years Experience</span>
-                    </div>
+                <div >
+                    <span><b id="explorers-num">2000+</b></span><br>
+                    <span>Our Explorers</span>
                 </div>
+                <div>
+                    <span><b id="destinations-num">100+</b></span><br>
+                    <span>Our Destinations</span>
+                </div>
+                <div>
+                    <span><b id="years-num">20+</b></span><br>
+                    <span>Years Experience</span>
+                </div>
+            </div>
             </div>
         </section>
 
@@ -236,7 +236,7 @@ require_once('app/includes/fns.php');
                                     <img src="IMAGES/Mask group (6).png" alt="Profile 1" class="profile-img">
                                 </p>
                                 <div class="profile-name">
-                                    <span><b>Park Micheal</b></span><br>
+                                    <span><b>Joeseph Micheal</b></span><br>
                                     <span>Travel Enthusiast</span>
                                 </div>
                                 <p>I had an amazing trip to the UK thanks to Fijoran Travels—everything was
@@ -258,7 +258,7 @@ require_once('app/includes/fns.php');
                                         class="profile-imgg border rounded-circle">
                                 </p>
                                 <div class="profile-name">
-                                    <span><b>Amy Johnson</b></span><br>
+                                    <span><b>Jessica Okonkwo</b></span><br>
                                     <span>Doctor</span>
                                 </div>
                                 <p>As a doctor attending an important work meeting in Qatar, I relied on Fijoran
@@ -281,7 +281,7 @@ require_once('app/includes/fns.php');
                                         class="profile-imgg border rounded-circle">
                                 </p>
                                 <div class="profile-name">
-                                    <span><b>Wyatt Trump</b></span><br>
+                                    <span><b>Liam Johnson</b></span><br>
                                     <span>Business Man</span>
                                 </div>
                                 <p>As a busy businessman, I needed a hassle-free vacation in Vietnam, and Fijoran
@@ -303,7 +303,7 @@ require_once('app/includes/fns.php');
                                         class="profile-imgg border rounded-circle">
                                 </p>
                                 <div class="profile-name">
-                                    <span><b>Sarah Lee</b></span><br>
+                                    <span><b>Bunmi Omotayo</b></span><br>
                                     <span>Entrepreneur/Student</span>
                                 </div>
                                 <p>Fijoran Travels made my student visa application for my Master’s program in
@@ -362,6 +362,11 @@ require_once('app/includes/fns.php');
             <input type="submit" value="Submit">
         </form>
     </section>
+
+    <button id="backToTop" class="btn btn-primary">
+    <i class="fa fa-arrow-up"></i> Top
+    </button>
+
 
     <?php include('footer.php') ?>
 
