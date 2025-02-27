@@ -3,7 +3,10 @@ session_start();
 include('includes/connect.php');
 require_once('includes/fns.php');
 
-
+$token = $_GET['token'];
+$query_ed = "select * from blog where token ='$token'";
+$result_ed  = mysqli_query($conn,$query_ed);
+$row_ed = mysqli_fetch_array($result_ed);
 ?>
 <!doctype html>
 <html lang="en">
@@ -70,7 +73,7 @@ require_once('includes/fns.php');
                 </div>
                 <div class="ms-auto">
                     <div class="btn-group">
-                        <a href="./product">
+                        <a href="./blog_post">
                             <button type="button" class="btn btn-primary">View Blogs</button></a>
 
                     </div>
@@ -78,7 +81,7 @@ require_once('includes/fns.php');
             </div>
             <!--end breadcrumb-->
 
-            <form action="./proc_add_blogs" method="POST" enctype="multipart/form-data">
+            <form action="./proc_edit_blogs" method="POST" enctype="multipart/form-data">
 
                 <div class="row">
                     <div class="col-xl-9 mx-auto">
@@ -97,13 +100,15 @@ require_once('includes/fns.php');
                                 <div class="input-group mb-3"> <span class="input-group-text" id="basic-addon1">Blog
                                         Title</span>
                                     <input type="text" class="form-control" name="title"
-                                        value="<?php echo $blog_title; ?>" placeholder="Blog Title"
+                                        value="<?php echo $row_ed['title']; ?>" placeholder="Blog Title"
                                         aria-label="Banner Text" aria-describedby="basic-addon1">
                                 </div>
                                 <div class="input-group mb-3"> <span class="input-group-text"
                                         id="basic-addon1">Category</span>
                                     <select class="form-control" name="category">
-                                        <option>Choose one</option>
+
+
+                                        <option><?php echo $row_ed['blog_category']; ?> </option>
                                         <?php 
                                         $query_cat = "select * from category order by cat_name";
                                         $result_cat = mysqli_query($conn,$query_cat);
@@ -121,7 +126,7 @@ require_once('includes/fns.php');
                                 <span class="input-group-text" id="basic-addon1">Blog Content</span>
                                 <textarea type="text" class="form-control" id="editor" aria-label="Content" cols="30"
                                     rows="10" aria-describedby="basic-addon1"
-                                    name="blog_content"><?php echo $row['blog_content']; ?></textarea>
+                                    name="blog_content"><?php echo $row_ed['content']; ?></textarea>
 
 
                                 <script>
@@ -132,21 +137,27 @@ require_once('includes/fns.php');
                                     });
                                 </script>
 
-                                <div class="input-group mb-3" style="margin-top:20px"> <span class="input-group-text"
-                                        id="basic-addon1">Image Path</span>
-                                    <input type="file" class="form-control" name="image_path" aria-label="image_path"
-                                        aria-describedby="basic-addon1">
-                                </div>
+
                                 <div class="input-group mb-3"> <span class="input-group-text"
                                         id="basic-addon1">date_posted </span>
                                     <input type="date" class="form-control" name="date_posted" aria-label="image_path2"
-                                        aria-describedby="basic-addon1">
+                                        aria-describedby="basic-addon1" value="<?php echo $row_ed['date_posted']; ?>">
                                 </div>
-                                <!-- <div class="input-group mb-3"> <span class="input-group-text" id="basic-addon1">date_created	</span>
-                  <input type="file" class="form-control" name="image_path3" aria-label="image_path3" aria-describedby="basic-addon1">
-                </div> -->
-
-                                <button class="btn btn-primary" type="submit">Submit</button>
+                                <!-- <div class=" input-group mb-3"> <span class="input-group-text"
+                                        id="basic-addon1">date_created </span>
+                                    <input type="file" class="form-control" name="image_path3" aria-label="image_path3"
+                                        aria-describedby="basic-addon1">
+                                </div> -->
+                                <div style="margin-bottom:30px;">
+                                    <img src="<?php echo $row_ed['blog_img']; ?>" style="height: 200px;">
+                                    <div class=" input-group mb-3" style="margin-top:20px"> <span
+                                            class="input-group-text" id="basic-addon1">Change Image</span>
+                                        <input type="file" class="form-control" name="image_path"
+                                            aria-label="image_path" aria-describedby="basic-addon1">
+                                    </div>
+                                </div>
+                                <input type="hidden" name="token" value="<?php echo $_GET['token']; ?>">
+                                <button class="btn btn-primary" type="submit">Save Changes</button>
 
                             </div>
                         </div>

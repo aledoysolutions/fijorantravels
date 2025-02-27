@@ -7,23 +7,24 @@ $blog_title = mysqli_real_escape_string($conn, $_POST['title']);
 $category = mysqli_real_escape_string($conn, $_POST['category']);
 $blog_content = mysqli_real_escape_string($conn, $_POST['blog_content']);
 $date_posted = mysqli_real_escape_string($conn, $_POST['date_posted']);
+$token = $_POST['token'];
 $image_extensions = ["jpg", "jpeg", "png", "gif"];
 
 if(empty($blog_title)){
     $error = 'Blog title is required';
-    include('./blog_form.php');
+    include('./edit_form.php');
     exit;
 }
 
 if(empty($category)){
     $error = 'Category is required';
-    include('./blog_form.php');
+    include('./edit_form.php');
     exit;
 }
 
 if(empty($blog_content)){
     $error = 'Blog content is required';
-    include('./blog_form.php');
+    include('./edit_form.php');
     exit;
 }
 
@@ -33,12 +34,6 @@ function validateImage($file) {
            in_array(strtolower(pathinfo($file['name'], PATHINFO_EXTENSION)), $image_extensions);
 }
 
-// Blog image (Required)
-if (!validateImage($_FILES['image_path'])) {
-    $error = 'Blog image is required and must be a valid image (jpg, png, jpeg, gif).';
-    include('./blog_form.php');
-    exit;
-}
 
 $image1_tmp = $_FILES['image_path']['tmp_name'];
 $image1_ext = strtolower(pathinfo($_FILES['image_path']['name'], PATHINFO_EXTENSION));
@@ -51,20 +46,19 @@ $image1_ext = strtolower(pathinfo($_FILES['image_path']['name'], PATHINFO_EXTENS
 // $image3_ext = $image3_tmp ? strtolower(pathinfo($_FILES['image_path3']['name'], PATHINFO_EXTENSION)) : null;
 
 // Insert product data
- $query = "INSERT INTO blog (title, content,blog_category, date_posted,token) VALUES ('$blog_title', '$blog_content', '$category','$date_posted', '".createToken()."')"; 
+ $query = "UPDATE blog set title = '$blog_title', content = '$blog_content', blog_category='$category', date_posted = '$date_posted' where token = '$token'"; 
 if (!mysqli_query($conn, $query)) {
     $error = 'Error inserting blog details.';
-    include('./blog_form.php');
+    include('./edit_form.php');
     exit;
 }
 
-$id = mysqli_insert_id($conn);
-
-// Upload Image 1 (Required)
-$image1_path = "uploads/blog_image/img{$id}.{$image1_ext}";
-move_uploaded_file($image1_tmp, $image1_path);
-mysqli_query($conn, "UPDATE blog SET blog_img = '$image1_path' WHERE id = '$id'");
-
+if($image1_tmp)
+{
+        $image1_path = "uploads/blog_image/img{$id}.{$image1_ext}";
+        move_uploaded_file($image1_tmp, $image1_path);
+        mysqli_query($conn, "UPDATE blog SET blog_img = '$image1_path' WHERE token = '$token'");
+}
 // // Upload Image 2 (Optional)
 // if ($image2_tmp) {
 //     $image2_path = "uploads/product_form_image/img2{$id}.{$image2_ext}";
@@ -80,6 +74,6 @@ mysqli_query($conn, "UPDATE blog SET blog_img = '$image1_path' WHERE id = '$id'"
 // }
 
 $success = 'Details have been updated successfully.';
-include('./blog_form.php');
+include('./blog_post.php');
 exit;
 ?>
