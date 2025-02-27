@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:8889
--- Generation Time: Feb 26, 2025 at 12:29 PM
--- Server version: 5.7.39
--- PHP Version: 7.4.33
+-- Host: 127.0.0.1
+-- Generation Time: Feb 27, 2025 at 05:10 PM
+-- Server version: 10.1.40-MariaDB
+-- PHP Version: 7.3.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -52,13 +53,22 @@ INSERT INTO `admin_login` (`id`, `firstname`, `lastname`, `email`, `phone`, `use
 
 CREATE TABLE `blog` (
   `id` int(10) NOT NULL,
+  `token` varchar(100) DEFAULT NULL,
   `title` varchar(150) NOT NULL,
-  `content` blob NOT NULL,
-  `location` varchar(80) NOT NULL,
+  `content` text NOT NULL,
+  `blog_location` varchar(80) NOT NULL,
   `blog_img` varchar(80) NOT NULL,
   `date_posted` date NOT NULL,
   `date_created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `blog`
+--
+
+INSERT INTO `blog` (`id`, `token`, `title`, `content`, `blog_location`, `blog_img`, `date_posted`, `date_created`) VALUES
+(1, '$2y$10$TKq8fAgIGZDS3fC8r2dCpOJ80JI7x1k7oXex1RbKMXLre1ELox.J6', 'Canada 5 days free visa', '<p>canada is giving a free visa</p>', 'canada', 'uploads/blog_image/img1.jpg', '2002-02-17', '2025-02-26 15:14:23'),
+(2, '$2y$10$wSs49P1tLdHZjHy91q/k1.cQpmlpnFRq8jdy2E43Q4QBeO9jHL1uK', 'PHP', '<p>Aledoy has started its tech talent</p>', 'Aledoy', 'uploads/blog_image/img2.jpg', '2000-02-19', '2025-02-26 15:52:42');
 
 -- --------------------------------------------------------
 
@@ -135,19 +145,19 @@ ALTER TABLE `product`
 -- AUTO_INCREMENT for table `admin_login`
 --
 ALTER TABLE `admin_login`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `blog`
 --
 ALTER TABLE `blog`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `product`
