@@ -12,6 +12,7 @@ if (!isset($_SERVER['HTTP_REFERER'])) {
 $name = mysqli_real_escape_string($conn, $_POST['name']);
 $email = mysqli_real_escape_string($conn, $_POST['email']);
 $contact_number = mysqli_real_escape_string($conn, $_POST['contact_number']);
+$destination = mysqli_real_escape_string($conn, $_POST['destination']);
 $travel_date = mysqli_real_escape_string($conn, $_POST['travel_date']);
 $information = mysqli_real_escape_string($conn, $_POST['information']);
 
@@ -60,13 +61,13 @@ if (strlen($information) > 30) {
 $content = 'Name: ' . $name_convert . "<br>" .
     'Email : ' . $email . "<br>" .
     'Contact_number : ' . $contact_number . "<br>" .
-    'Travel Date : ' . $travel_date . "<br>" .
+    'preferred_travel_date : ' . $travel_date . "<br>" .
     'Information : ' . $information . "<br>" .
     "$otherInfo".
     '================================================' . "\n";
 
-$to = 'bookings@fijorantravels.com';
-$subject = 'Client Trip Booking Info';
+$to = 'info@fijorantravels.com';
+$subject = 'Client Inquiry - Contact Information';
 $from = "From: noreply@aledoy.com";
 
 send_email($to, organisation(), $name, $subject, $content);
